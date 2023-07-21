@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>TODO List</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="logout"></div>
+    </header>
+    <aside>
+      <div class="title">
+        <label for="task-title">Task Title</label>
+        <input type="text" name="task-title" id="task-title" placeholder="Enter task title">
+      </div>
+      <div class="description">
+        <label for="task-description">Task Description</label>
+        <textarea type="text" rows="5" name="task-description" id="task-description" placeholder="Enter task description"></textarea>
+      </div>
+      <div class="due-date">
+        <label for="task-date">Due Date</label>
+        <input type="date" name="task-date" id="task-date">
+      </div>
+      <button type="button" id="btn-add">Add</button>
+    </aside>
+    <main>
+      <div class="task-table-container">
+        <table id='task-table'></table>
+      </div>
+      <div class="task-stats"></div>
+    </main>
+    <footer></footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
