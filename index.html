@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b36b85e4ea.js" crossorigin="anonymous"></script>
     <title>TODO List</title>
   </head>
   <body>
+    <!--header needs to be customized, to show logo and a logout button, like a real application-->
     <header>
       <div class="logo"></div>
       <div class="logout"></div>
     </header>
+    <!--aside serves as a place where the user pass the needed info for task creation-->
     <aside>
+      <!--The aside is comprised by three input sections and a button to send the inputs to the JS logic-->
       <div class="title">
         <label for="task-title">Task Title</label>
         <input type="text" name="task-title" id="task-title" placeholder="Enter task title">
@@ -27,13 +30,51 @@
       </div>
       <button type="button" id="btn-add">Add</button>
     </aside>
+    <!--the main tag is the container for the two main sections: a container for listing the tasks and another container for showing the task stats-->
     <main>
       <div class="task-table-container">
-        <table id='task-table'></table>
+        <table class="task-table">
+          <thead>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="task-table-body"></tbody>
+        </table>
       </div>
-      <div class="task-stats"></div>
+      <div class="task-stats">
+        <table id="stats-table">
+          <tbody>
+            <tr>
+              <td>Planned:</td>
+              <td class="centered" id="show-planned"></td>
+            </tr>
+            <tr>
+              <td>In Progress:</td>
+              <td class="centered" id="show-in-progress"></td>
+            </tr>
+            <tr>
+              <td>Completed: </td>
+              <td class="centered" id="show-completed"></td>
+            </tr>
+            <tr>
+              <td>Cancelled:</td>
+              <td class="centered" id="show-cancelled"></td>
+            </tr>
+            <tr>
+              <td><div class="tooltip">Overdue:<span class="tooltip-text">This value is not considered when computing number of tasks.</span></div></td>
+              <td class="centered" id="show-overdue"></td>
+            </tr>
+            <tr>
+              <td>Total:</td>
+              <td class="centered" id="show-total"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
     <footer></footer>
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
