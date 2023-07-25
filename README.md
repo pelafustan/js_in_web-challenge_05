@@ -2,17 +2,17 @@
 
 ## Context
 
-A real estate investment company hired us to make a webpage to show to their clients their available properties. This page should:
-* Render, dynamically, the content.
-* Have a sidebar filter.
-
-The user should be able to filter by:
-* Number of rooms.
-* Property surface.
+I need to develop a TODO app. I get a little bit excited and ended doing more than the requirements.
 
 ## View
 
-Let's check this wonderful piece of software [here.](https://pelafustan.github.io/js_in_web-challenge_04/)
+Let's check this wonderful piece of software [here.](https://pelafustan.github.io/js_in_web-challenge_05/)
+
+## TODO
+
+* Change color depending on status.
+* Block other options when task is marked as completed or cancelled.
+* I'm quite sure that I'm forgetting somethig, but maybe it isn't important.
 
 ## Author
 
