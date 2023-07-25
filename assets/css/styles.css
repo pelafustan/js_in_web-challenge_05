@@ -1,9 +1,12 @@
+/* I really like this font */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap');
 
+/* idk why this isn't the default behaviour */
 * {
   box-sizing: border-box;
 }
 
+/* basic styling and disposition for 'skeleton' elements */
 body {
   font-family: "Roboto", sans-serif;
   height: 100vh;
@@ -42,13 +45,15 @@ main {
   border-radius: 10px;
   margin-right: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% auto;
 }
 
 footer {
   grid-area: footer;
   background-color: #708b94;
 }
+
+/* customization for user input section */
 
 label {
   font-size: 1.5rem;
@@ -86,21 +91,65 @@ label {
   text-align: left;
 }
 
+/* styles related to tables */
 .task-stats, .task-table-container {
   background-color: #fff;
   border-radius: 10px;
   margin: 10px 10px;
 }
 
-#task-table {
+.centered {
+  text-align: center;
+}
+
+.task-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-table {
+  margin: 2rem auto;
   border-collapse: collapse;
   width: 90%;
 }
 
-#task-table tr, #task-table th {
-  border: 1px solid #ddd;
+#stats-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 90%;
 }
 
+.task-table tr, .task-table th {
+  border: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+#stats-table tr td {
+  width: 50%;
+  height: 3rem;
+  font-weight: 700;
+}
+
+.task-table tr td:first-child {
+  padding-left: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#stats-table tr:last-child {
+  border-top: 1px solid #ddd;
+}
+
+.task-table tr td:first-child:hover {
+  cursor: pointer;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+/* styles for buttons */
 #btn-add {
   border: none;
   background-color: #182623;
@@ -111,4 +160,44 @@ label {
 #btn-add:hover {
   cursor: pointer;
   background-color: #7c9c94;
+}
+
+.delete-btn {
+  border: none;
+  color: #182623;
+  background-color: #fff;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  color: #aaa;
+}
+
+/* show text on hovering */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip .tooltip-text {
+  font-size: 12px;
+  font-weight: 100;
+  visibility: hidden;
+  width: 250px;
+  color: #ddd;
+  background-color: #182623;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5px 10px;
+  padding: 8px 5px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  cursor: text;
 }
